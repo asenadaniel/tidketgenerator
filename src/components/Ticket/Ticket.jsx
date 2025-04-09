@@ -9,7 +9,7 @@ function Ticket() {
 
 
   return (
-    <div className=' bg-[url(./assets/desktop.png)] bg-cover bg-center h-screen  flex flex-col text-white items-center  m-auto'>
+    <div className=' bg-[url(./assets/desktop.png)] bg-cover bg-center min-h-screen  flex flex-col text-white items-center  m-auto'>
 
       <div className=' mt-10 mb-3'>
         <div className='flex justify-center items-center mb-15'>
