@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../../assets/logo-full.svg'
 import { useLocation } from 'react-router-dom'
 
+
 function Ticket() {
 
   const Location = useLocation()
@@ -11,7 +12,7 @@ function Ticket() {
   return (
     <div className=' bg-[url(./assets/desktop.png)]  bg-no-repeat bg-right-top z-10 bg-cover min-h-screen'>
 
-      <div className='  bg-[url(./assets/pattern-squiggly-line-top.svg)]  bg-cover bg-center min-h-screen  flex flex-col text-white items-center  m-auto'>
+      <div className='  bg-[url(./assets//pattern-lines.svg)]  bg-cover bg-center min-h-screen  flex flex-col text-white items-center  m-auto'>
 
         <div className=' mt-10 mb-3'>
           <div className='flex justify-center items-center mb-15'>
@@ -78,6 +79,9 @@ function Ticket() {
                   )
 
                 }
+              </div>
+              <div>
+                <img src="" alt="" />
               </div>
             </div>
           </div>
