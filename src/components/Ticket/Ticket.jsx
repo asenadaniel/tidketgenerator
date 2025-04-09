@@ -39,12 +39,12 @@ function Ticket() {
 
       <div className=' md:mt-[160px] mt-[70px]  '>
 
-        <div className=' bg-pink-200/20 backdrop-blur-lg  border-pink-300 border w-auto md:w-[480px]  text-white  hover:bg-pink-300/20 transition flex flex-col items-center justify-start cursor-pointer md:pr-[200px] pl-3 h-[200px] pr-[20px] ' >
+        <div className=' bg-pink-200/20 backdrop-blur-lg  border-pink-300 border w-[350px] md:w-[480px]  text-white  hover:bg-pink-300/20 transition flex flex-col items-center justify-start cursor-pointer md:pr-[200px] pl-3 h-[200px] pr-[20px] ' >
 
           <div className='  cursor-pointer flex flex-col space-y-5 ' >
-            <div className=' ' >
+            <div className='  flex flex-col justify-center items-center' >
               <img src={logo} alt="" className='mt-5 w-[180px]' />
-              <p className="text-gray-400 text-sm flex items-center justify-center">
+              <p className="text-gray-400 text-sm flex items-center ">
                 {new Date().toLocaleDateString('en-US', {
                   weekday: 'long',
                   year: 'numeric',
@@ -68,10 +68,10 @@ function Ticket() {
               {
                 ticketData && (
                   <div>
-                    <p className=' text-xl font-medium'>
+                    <p className=' md:text-xl font-medium'>
                       {ticketData.FullName}
                     </p>
-                    <p className=' text-gray-400'>{ticketData.Email}</p>
+                    <p className=' text-gray-400 text-sm'>{ticketData.Email}</p>
                   </div>
                 )
 
