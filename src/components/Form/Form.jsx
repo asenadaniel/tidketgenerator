@@ -13,7 +13,10 @@ function Form() {
     // console.log("Uploaded Files:", acceptedFiles);
   }, []);
 
-  const { getRootProps, getInputProps } = useDropzone({ onDrop });
+  const { getRootProps, getInputProps, fileRejections } = useDropzone({
+    onDrop, accept: "image/*",
+    maxSize: 2 * 1024 * 1024,
+  });
   const {
     register,
     handleSubmit,
@@ -29,8 +32,6 @@ function Form() {
 
     });
 
-    // console.log(data)
-    // console.log(uploadFiles)
   };
 
   return (
@@ -51,8 +52,13 @@ function Form() {
           {!uploadFiles && <p className="text-gray-400">Drag and drop or click to upload</p>}
           {uploadFiles && (
             <p className="text-gray-300 mt-2">{uploadFiles.name}</p>
+
           )}
         </div>
+
+        {fileRejections.length > 0 && (
+          <p className="text-red-500 text-sm mt-2">   File is invalid. Please upload an image file under 2MB. </p>
+        )}
 
         {/* Full Name Input */}
         <div>
@@ -83,8 +89,8 @@ function Form() {
             {...register("Email", {
               required: "Email is required",
               pattern: {
-                value: /^\S+@\S+$/i,
-                message: "Invalid email address",
+                value: /^\S+@\S+\.\S+$/i,
+                message: <p className="pt-[15px]">Please enter a valid email address</p>,
               },
             })}
             className="p-2 rounded border border-gray-500 w-full"
