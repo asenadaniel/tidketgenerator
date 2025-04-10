@@ -42,7 +42,7 @@ function Ticket() {
 
         <div className=' md:mt-[160px] mt-[70px]  '>
 
-          <div className=' bg-pink-200/20 backdrop-blur-lg  border-pink-300 border w-[350px] md:w-[100%]  text-white  hover:bg-pink-300/20 transition flex flex-col items-center justify-center cursor-pointer md:pr-[200px] pl-8 h-[210px] pr-[0px] ' >
+          <div className=' bg-pink-200/20 backdrop-blur-lg  border-pink-300 border w-[350px] md:w-[100%]  text-white  hover:bg-pink-300/20 transition flex flex-col items-center justify-center cursor-pointer md:pr-[200px] pl-8 h-[210px] pr-[40px] ' >
 
             <div className='  cursor-pointer flex flex-col space-y-5 ' >
               <div className='  flex flex-col justify-center items-center' >
