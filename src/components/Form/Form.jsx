@@ -58,7 +58,7 @@ function Form() {
         </div>
 
         {fileRejections.length > 0 && (
-          <p className="text-red-500 text-sm mt-2">   File is invalid. Please upload an image file under 2MB. </p>
+          <p className="text-red-500 text-sm mt-2 font-bold">   File is invalid. Please upload an image file under 2MB. </p>
         )}
 
         {/* Full Name Input */}
