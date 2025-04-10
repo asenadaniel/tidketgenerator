@@ -70,7 +70,13 @@ function Form() {
             id="fullName"
             type="text"
             placeholder="Full Name"
-            {...register("FullName", { required: "Full Name is required" })}
+            {...register("FullName", {
+              required: "Full Name is required",
+              pattern: {
+                value: /^[a-zA-Z ]+$/i,
+                message: "Full Name can only contain letters and spaces",
+              },
+            })}
             className="p-2 rounded border border-gray-500 w-full"
           />
           {errors.FullName && (
@@ -118,6 +124,10 @@ function Form() {
             placeholder="GitHub Username"
             {...register("GitHubUsername", {
               required: "GitHub Username is required",
+              pattern: {
+                value: /^[a-zA-Z0-9]+$/i,
+                message: "GitHub Username can only contain letters and numbers",
+              },
             })}
             className="p-2 rounded border border-gray-500 w-full"
           />
