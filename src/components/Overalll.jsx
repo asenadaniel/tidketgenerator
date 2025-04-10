@@ -1,8 +1,6 @@
 import React from 'react'
 import Header from './Header/Header'
 import Form from './Form/Form'
-import logo2 from '../../src/assets/pattern-lines.svg'
-import logo3 from '../../src/assets/pattern-squiggly-line-top.svg'
 
 
 function Overall() {
