@@ -3,6 +3,7 @@ import { useDropzone } from "react-dropzone";
 import { Upload } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import info from "../../assets/icon-info.svg";
 
 function Form() {
   const [uploadFiles, setUploadedFile] = useState(null);
@@ -73,7 +74,10 @@ function Form() {
             className="p-2 rounded border border-gray-500 w-full"
           />
           {errors.FullName && (
-            <p className="text-red-500 text-sm">{errors.FullName.message}</p>
+            <p className="text-red-500 text-sm flex gap-2 mt-3">
+              <img src={info} alt="" className="" />
+              {errors.FullName.message}
+            </p>
           )}
         </div>
 
@@ -96,7 +100,10 @@ function Form() {
             className="p-2 rounded border border-gray-500 w-full"
           />
           {errors.Email && (
-            <p className="text-red-500 text-sm">{errors.Email.message}</p>
+            <p className="text-red-500 text-sm  flex gap-2 mt-3">
+              <img src={info} alt="" className="" />
+              {errors.Email.message}
+            </p>
           )}
         </div>
 
@@ -115,7 +122,8 @@ function Form() {
             className="p-2 rounded border border-gray-500 w-full"
           />
           {errors.GitHubUsername && (
-            <p className="text-red-500 text-sm">
+            <p className="text-red-500 text-sm  flex gap-2 mt-3">
+              <img src={info} alt="" className="" />
               {errors.GitHubUsername.message}
             </p>
           )}
