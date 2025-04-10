@@ -74,7 +74,7 @@ function Form() {
             className="p-2 rounded border border-gray-500 w-full"
           />
           {errors.FullName && (
-            <p className="text-red-500 text-sm flex gap-2 mt-3">
+            <p className="text-red-500 text-sm font-bold flex gap-2 mt-3">
               <img src={info} alt="" className="" />
               {errors.FullName.message}
             </p>
@@ -100,7 +100,7 @@ function Form() {
             className="p-2 rounded border border-gray-500 w-full"
           />
           {errors.Email && (
-            <p className="text-red-500 text-sm  flex gap-2 mt-3">
+            <p className="text-red-500 font-bold text-sm  flex gap-2 mt-3">
               <img src={info} alt="" className="" />
               {errors.Email.message}
             </p>
@@ -122,7 +122,7 @@ function Form() {
             className="p-2 rounded border border-gray-500 w-full"
           />
           {errors.GitHubUsername && (
-            <p className="text-red-500 text-sm  flex gap-2 mt-3">
+            <p className="text-red-500 text-sm font-bold  flex gap-2 mt-3">
               <img src={info} alt="" className="" />
               {errors.GitHubUsername.message}
             </p>
